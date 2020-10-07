@@ -1,5 +1,3 @@
-import java.util.concurrent.*;
-import java.util.concurrent.locks.*;
 import java.util.concurrent.atomic.*;
 
 // Test-test-and-set Lock uses an atomic value for
@@ -27,7 +25,7 @@ import java.util.concurrent.atomic.*;
 // it is only suitable for low-contention
 // memory-limited architectures.
 
-class TTASLock implements Lock {
+class TTASLock extends AbstractLock {
   AtomicBoolean locked;
   // locked: indicates if lock is engaged
 
@@ -58,27 +56,5 @@ class TTASLock implements Lock {
   @Override
   public void unlock() {
     locked.set(false); // 1
-  }
-
-  @Override
-  public void lockInterruptibly() throws InterruptedException {
-    lock();
-  }
-
-  @Override
-  public boolean tryLock() {
-    lock();
-    return true;
-  }
-
-  @Override
-  public boolean tryLock(long arg0, TimeUnit arg1) throws InterruptedException {
-    lock();
-    return true;
-  }
-
-  @Override
-  public Condition newCondition() {
-    return null;
   }
 }

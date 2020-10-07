@@ -31,6 +31,7 @@ The TTASLock is due to [Clyde Kruskal],
 [Marc Snir]: https://en.wikipedia.org/wiki/Marc_Snir
 
 ```java
+lock():
 1. When thread wants to access critical
    section, it checks to see if lock is already
    engaged, and if so, waits (spins).
@@ -43,6 +44,7 @@ The TTASLock is due to [Clyde Kruskal],
 ```
 
 ```java
+unlock():
 1. When a thread is done with its critical
    section, it simply sets the "locked" state
    to false.
