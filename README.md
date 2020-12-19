@@ -30,6 +30,11 @@ The TTASLock is due to [Clyde Kruskal],
 [Larry Rudolph]: http://people.csail.mit.edu/rudolph/
 [Marc Snir]: https://en.wikipedia.org/wiki/Marc_Snir
 
+> **Course**: [Concurrent Data Structures], Monsoon 2020\
+> **Taught by**: Prof. Govindarajulu Regeti
+
+[Concurrent Data Structures]: https://github.com/iiithf/concurrent-data-structures
+
 ```java
 lock():
 1. When thread wants to access critical
